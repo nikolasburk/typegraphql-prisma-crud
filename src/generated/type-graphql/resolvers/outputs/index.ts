@@ -1,0 +1,11 @@
+export { AggregatePost } from "./AggregatePost";
+export { AggregateUser } from "./AggregateUser";
+export { BatchPayload } from "./BatchPayload";
+export { PostAvgAggregateOutputType } from "./PostAvgAggregateOutputType";
+export { PostMaxAggregateOutputType } from "./PostMaxAggregateOutputType";
+export { PostMinAggregateOutputType } from "./PostMinAggregateOutputType";
+export { PostSumAggregateOutputType } from "./PostSumAggregateOutputType";
+export { UserAvgAggregateOutputType } from "./UserAvgAggregateOutputType";
+export { UserMaxAggregateOutputType } from "./UserMaxAggregateOutputType";
+export { UserMinAggregateOutputType } from "./UserMinAggregateOutputType";
+export { UserSumAggregateOutputType } from "./UserSumAggregateOutputType";
