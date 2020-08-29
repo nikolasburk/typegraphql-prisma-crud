@@ -1,9 +1,6 @@
-import "reflect-metadata";
-import * as tq from "type-graphql";
-import { PostResolver } from "./PostResolver";
-import { UserResolver } from "./UserResolver";
-import { GraphQLServer } from "graphql-yoga";
-import { createContext } from "./context";
+import 'reflect-metadata'
+import * as tq from 'type-graphql'
+import { ApolloServer } from 'apollo-server'
 import {
   CreateUserResolver,
   UpdateUserResolver,
@@ -15,18 +12,29 @@ import {
   DeletePostResolver,
   FindOnePostResolver,
   FindManyPostResolver,
-} from "./generated/type-graphql";
+} from './generated/type-graphql'
+import { createContext } from './context'
 
 const app = async () => {
   const schema = await tq.buildSchema({
-    resolvers: [CreateUserResolver, UpdateUserResolver, DeleteUserResolver, FindOneUserResolver, FindManyUserResolver, CreatePostResolver, UpdatePostResolver, DeletePostResolver, FindOnePostResolver, FindManyPostResolver],
-  });
+    validate: false,
+    resolvers: [
+      CreateUserResolver,
+      UpdateUserResolver,
+      DeleteUserResolver,
+      FindOneUserResolver,
+      FindManyUserResolver,
+      CreatePostResolver,
+      UpdatePostResolver,
+      DeletePostResolver,
+      FindOnePostResolver,
+      FindManyPostResolver,
+    ],
+  })
 
-  const context = createContext();
+  new ApolloServer({ schema, context: createContext() }).listen({ port: 4000 }, () =>
+    console.log(`🚀 Server ready at: http://localhost:4000`),
+  )
+}
 
-  new GraphQLServer({ schema, context }).start(() =>
-    console.log(`🚀 Server ready at: http://localhost:4000`)
-  );
-};
-
-app();
+app()

@@ -28,4 +28,44 @@ Launch your GraphQL server with this command:
 npm run dev
 ```
 
-Navigate to [http://localhost:4000](http://localhost:4000) in your browser to explore the CRUD API of your GraphQL server in a [GraphQL Playground](https://github.com/prisma/graphql-playground).
+Navigate to [http://localhost:4000](http://localhost:4000) in your browser to explore the CRUD API of your GraphQL server in a [GraphQL Playground](https://github.com/prisma/graphql-playground). 
+
+
+### 3. Explore GraphQL API
+
+#### Retrieve all posts
+
+```graphql
+{
+  posts {
+    id
+    title
+    author {
+      email
+      name
+      id
+    }
+  }
+}
+```
+
+#### Create new post with author (nested mutation)
+
+```graphql
+mutation {
+  createPost(data: {
+    title: "Hello World"
+    author: {
+      create: {
+        name: "James"
+        email: "james@prisma.io"
+      }
+    }
+  }) {
+    id
+    author {
+      id
+    }
+  }
+}
+```
