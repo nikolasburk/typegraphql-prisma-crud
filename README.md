@@ -1,4 +1,4 @@
-# GraphQL Server Example
+# GraphQL Server CRUD Example (SQLite)
 
 This example shows how to **implement a CRUD GraphQL API with TypeScript** based on [Prisma Client](https://github.com/prisma/prisma2/blob/master/docs/prisma-client-js/api.md), [TypeGraphQL](https://typegraphql.com/) and the [`typegraphql-prisma`](https://www.npmjs.com/package/typegraphql-prisma) integration. It is based on a SQLite database - you can find the database file with some dummy data at [`./prisma/dev.db`](./prisma/dev.db).
 
