@@ -9,7 +9,7 @@ This example shows how to **implement a CRUD GraphQL API with TypeScript** based
 Clone this repository:
 
 ```
-git clone git@github.com:nikolasburk/typegraphql-prisma-crud.git --depth=1
+git clone https://github.com/nikolasburk/typegraphql-prisma-crud.git --depth=1
 ```
 
 Install npm dependencies:
