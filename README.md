@@ -9,7 +9,7 @@ This example shows how to **implement a CRUD GraphQL API with TypeScript** based
 Clone this repository:
 
 ```
-git clone git@github.com:nikolasburk/typegraphql-prisma-crud.git --depth=1
+git clone https://github.com/nikolasburk/typegraphql-prisma-crud.git --depth=1
 ```
 
 Install npm dependencies:
@@ -17,6 +17,26 @@ Install npm dependencies:
 ```
 cd typegraphql-prisma-crud
 npm install
+```
+
+or 
+
+```
+cd typegraphql-prisma-crud
+yarn
+```
+
+
+and generate the schema:
+
+```
+npx prisma generate
+```
+
+or:
+
+```
+yarn prisma generate
 ```
 
 
@@ -27,6 +47,13 @@ Launch your GraphQL server with this command:
 ```
 npm run dev
 ```
+
+or 
+
+```
+yarn run dev
+```
+
 
 Navigate to [http://localhost:4000](http://localhost:4000) in your browser to explore the CRUD API of your GraphQL server in a [GraphQL Playground](https://github.com/prisma/graphql-playground). 
 
