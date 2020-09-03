@@ -19,6 +19,26 @@ cd typegraphql-prisma-crud
 npm install
 ```
 
+or 
+
+```
+cd typegraphql-prisma-crud
+yarn
+```
+
+
+and generate the schema:
+
+```
+npx prisma generate
+```
+
+or:
+
+```
+yarn prisma generate
+```
+
 
 ### 2. Start the GraphQL server
 
@@ -27,6 +47,13 @@ Launch your GraphQL server with this command:
 ```
 npm run dev
 ```
+
+or 
+
+```
+yarn run dev
+```
+
 
 Navigate to [http://localhost:4000](http://localhost:4000) in your browser to explore the CRUD API of your GraphQL server in a [GraphQL Playground](https://github.com/prisma/graphql-playground). 
 
